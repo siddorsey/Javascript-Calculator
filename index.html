@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Treat Yo Self Calculator</title>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+<div id="content">
+	<div id="header">
+		TREAT YO' SELF CALCULATOR
+	</div>
+
+	<h1>How much did you spend on treating yourself this year?</h1>
+	<h2>"Treat Yo' Self Day" is one day a year when you spend it treating yourself. <br>(Coined by Parks & Recreation)</br></h2>
+	<p><img src="images/cupcake.gif"></p>
+
+
+	<h1>How many did you buy of the following when you treated yo' self?</h1>
+	<form  id="form1">
+
+	<div class="question">
+		<img src="images/cupcakes.png"/>
+		<h2>Cupcakes</h2>
+		<label for="cupcakes"> </label>
+		<select id="cupcake" onChange=" ">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+	</div>
+
+	<div class="question">
+		<img src="images/clothes.png"/>
+		<h2>Clothes</h2>
+		<label for="clothing"></label>
+		<select id="clothes">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>			
+		</select>
+	</div>
+			
+	<div class="question">
+		<img src="images/fragrances.png"/>
+		<h2>Fragrances</h2>
+		<label for="fragrances"></label>
+		<select id="fragrance">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>			
+		</select>
+	</div>
+
+	<div class="question">
+		<img src="images/massages.png"/>
+		<h2>Massages</h2>
+		<label for="massages"></label>
+		<select id="massage">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>			
+		</select>
+	</div>
+				
+	<div class="question">
+		<img src="images/mimosas.png"/>
+		<h2>Mimosas</h2>
+		<label for="mimosas"></label>
+		<select id="mimosa">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>			
+		</select>
+	</div>	
+
+	<div class="question">
+		<img src="images/leather.png"/>
+		<h2>Fine Leather Goods</h2>
+		<label for="leathergoods"></label>
+		<select id="leathergood">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>			
+		</select>
+	</div>	
+
+</form>
+
+
+<div id="totals">
+	<h1>Average Totals: </h1>
+		<h2>Amount spent on:</h2>
+			<p><strong>Cupcakes:</strong> <span id="cupcakes"> </span></p>
+			<p><strong>Clothes:</strong> <span id="clothing"> </span></p>
+			<p><strong>Fragrances:</strong> <span id="fragrances"> </span></p>
+			<p><strong>Massages:</strong> <span id="massages"> </span></p>	
+			<p><strong>Mimosas:</strong> <span id="mimosas"> </span></p>
+			<p><strong>Fine Leather Goods:</strong> <span id="leathergoods"> </span></p>
+				
+			<div class="question"><h3><strong>You spent </strong> $<u><span id="total_cost"> </span></u> treating yo' self!</h3></div>
+
+			<p>This is just based on my guestimations. I am not a professional. <br /> Please do not consult this calculator for financial guidance. Please.</p>
+
+			<p class="tinytext">October 12, 2017 - Sidney Dorsey</p>
+
+</div>
+
+
+<script>
+document.getElementById("form1").onchange=function() {
+
+cupcake = document.getElementById("cupcake").value;
+cuptotal  = (cupcake * 3.50);
+document.getElementById("cupcakes").innerHTML = cuptotal.toFixed(2);
+
+
+clothes = document.getElementById("clothes").value;
+clototal  = (clothes * 42.85);
+document.getElementById("clothing").innerHTML = clototal.toFixed(2);
+
+fragrance = document.getElementById("fragrance").value;
+fragtotal  = (fragrance * 27.74);
+document.getElementById("fragrances").innerHTML = fragtotal.toFixed(2);
+
+massage = document.getElementById("massage").value;
+masstotal  = (massage * 60.00);
+document.getElementById("massages").innerHTML = masstotal.toFixed(2);
+
+mimosa = document.getElementById("mimosa").value;
+mimtotal  = (mimosa * 4.44);
+document.getElementById("mimosas").innerHTML = mimtotal.toFixed(2);
+
+leathergood = document.getElementById("leathergood").value;
+leathertotal  = (leathergood * 149.99);
+document.getElementById("leathergoods").innerHTML = leathertotal.toFixed(2);
+
+
+total = cuptotal + clototal + fragtotal + masstotal + mimtotal + leathertotal;
+document.getElementById("total_cost").innerHTML = total.toFixed(2);
+
+
+}
+
+
+
+
+</script>
+
+
+</body></div></p></div></div>
+</html>
